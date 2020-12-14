@@ -56,70 +56,70 @@ public class EmployeesEntity {
 	}
 	
 	
-	private long getEmployeeId() {
+	public long getEmployeeId() {
 		return employeeId;
 	}
-	private void setEmployeeId(long employeeId) {
+	public void setEmployeeId(long employeeId) {
 		this.employeeId = employeeId;
 	}
-	private String getFirstName() {
+	public String getFirstName() {
 		return firstName;
 	}
-	private void setFirstName(String firstName) {
+	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	private String getLastName() {
+	public String getLastName() {
 		return lastName;
 	}
-	private void setLastName(String lastName) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	private String getEmail() {
+	public String getEmail() {
 		return email;
 	}
-	private void setEmail(String email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
-	private String getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-	private void setPhoneNumber(String phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	private Date getHireDate() {
+	public Date getHireDate() {
 		return hireDate;
 	}
-	private void setHireDate(Date hireDate) {
+	public void setHireDate(Date hireDate) {
 		this.hireDate = hireDate;
 	}
-	private String getJobId() {
+	public String getJobId() {
 		return jobId;
 	}
-	private void setJobId(String jobId) {
+	public void setJobId(String jobId) {
 		this.jobId = jobId;
 	}
-	private float getSalary() {
+	public float getSalary() {
 		return salary;
 	}
-	private void setSalary(float salary) {
+	public void setSalary(float salary) {
 		this.salary = salary;
 	}
-	private float getComissionPCT() {
+	public float getComissionPCT() {
 		return comissionPCT;
 	}
-	private void setComissionPCT(float comissionPCT) {
+	public void setComissionPCT(float comissionPCT) {
 		this.comissionPCT = comissionPCT;
 	}
-	private int getManagerId() {
+	public int getManagerId() {
 		return managerId;
 	}
-	private void setManagerId(int managerId) {
+	public void setManagerId(int managerId) {
 		this.managerId = managerId;
 	}
-	private int getDepartamentId() {
+	public int getDepartamentId() {
 		return departamentId;
 	}
-	private void setDepartamentId(int departamentId) {
+	public void setDepartamentId(int departamentId) {
 		this.departamentId = departamentId;
 	}
 
@@ -130,8 +130,5 @@ public class EmployeesEntity {
 				+ ", salary=" + salary + ", comissionPCT=" + comissionPCT + ", managerId=" + managerId
 				+ ", departamentId=" + departamentId + "]";
 	}
-	
-	
-	
 	
 }

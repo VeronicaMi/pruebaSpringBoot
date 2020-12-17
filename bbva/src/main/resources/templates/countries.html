@@ -21,7 +21,7 @@
 				<tr>
 					<th>Country Id</th>
 					<th>Country Name</th>
-					<th>Region Id</th>
+					<th>Region</th>
 					<th>Actions</th>
 				</tr>
 			</thead>
@@ -30,13 +30,13 @@
 				<tr th:each="country : ${listCountries}">
 					<td th:text="${country.countryId}"></td>
 					<td th:text="${country.countryName}"></td>
-					<td th:text="${country.regionId}"></td>
+					<td th:text="${country.regions.regionName}"></td>
 					<td>
 						<!-- 
 						
 					--> <a th:href="@{/updateCountry/{id}(id=${country.countryId})}"
 						class="btn btn-primary">Update</a>
-						<a th:href="@{/deleteCountry{id}(id=${country.countryId})}"
+						<a th:href="@{/deleteCountry/{id}(id=${country.countryId})}"
 						class="btn btn-danger">Delete</a>
 					</td>
 

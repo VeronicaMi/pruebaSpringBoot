@@ -24,15 +24,14 @@
 			<input type="text"  th:field="*{countryName}" placeholder="Country Name"
 				class="form-control mb-4 col-4"> 
 				
-			<label class="mb-4 col-4">Regions</label>
-			
- 			<select th:object="${regions}" class="form-control mb-4 col-4" id="regionId"> 
-			<option value="">Select region</option>
+			<label class="mb-4 col-4">Regions</label>			
+ 			
+ 			<select th:field="*{regionId}" class="form-control mb-4 col-4" id="regionId"> 
+			<option value="0">Select region</option>
 			<option th:each="region:${regions}"
 						th:value="${region.regionId}"
 						th:text="${region.regionName}"	/>    
 			</select> 
-			
 			
 			<button type="submit" class="btn btn-info col-2">Save country</button>
 

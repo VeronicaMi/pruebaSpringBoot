@@ -10,4 +10,6 @@ public interface CountriesService {
 	public abstract void saveCountry(CountriesEntity country);
 	public abstract CountriesEntity getCountryById(String id);
 	public abstract void deleteCountryById(String id);
+	
+	public abstract void listCountriesRegiosn();
 }

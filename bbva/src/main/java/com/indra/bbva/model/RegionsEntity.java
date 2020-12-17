@@ -5,8 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "REGIONS")
@@ -20,9 +20,8 @@ public class RegionsEntity {
 	@Column (name = "REGION_NAME")
 	private String regionName;
 
-	//@OneToMany(mappeBy = "region", cascade = ALL)
 	public RegionsEntity() {}
-	
+
 	public RegionsEntity(long regionId, String regionName) {
 		super();
 		this.regionId = regionId;
@@ -50,8 +49,4 @@ public class RegionsEntity {
 		return "RegionsEntity [regionId=" + regionId + ", regionName=" + regionName + "]";
 	}
 	
-	
-	
-	
-
 }

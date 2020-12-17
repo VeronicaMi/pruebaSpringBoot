@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -15,20 +13,14 @@ import com.indra.bbva.repository.CountriesRepository;
 @Service
 public class CountriesServiceImpl implements CountriesService{
 
-private JdbcTemplate jdbcTemplate;
 	
 	@Autowired
 	private CountriesRepository countriesRepository;
-
-	public CountriesServiceImpl(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
 	
 	@Override
 	@GetMapping("/")
 	public List<CountriesEntity> getAllCountries() {
-		String sql = "SELECT * FROM COUNTRIES";
-		List<CountriesEntity> countries = jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(CountriesEntity.class));
+		List<CountriesEntity> countries = countriesRepository.findAll();
 		System.out.println(countries);
 		return countries;
 	}
@@ -55,6 +47,10 @@ private JdbcTemplate jdbcTemplate;
 	@Override
 	public void deleteCountryById(String id) {
 		this.countriesRepository.deleteById(id);
+	}
+	
+	public void listCountriesRegiosn() {
+		System.out.println("Hola countries regions");
 	}
 	
 }
